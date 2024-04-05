@@ -8,24 +8,24 @@
     tools:context=".ActivityCalculadora">
 
     <TextView
-        android:id="@+id/textResultados"
+        android:id="@+id/textViewResultados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="TextView"
+        android:layout_marginBottom="28dp"
+        android:text="0"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout5" />
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout4" />
 
     <TextView
-        android:id="@+id/textOperadores"
+        android:id="@+id/textViewOperadores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="TextView"
+        android:text="0"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textResultados"
-        app:layout_constraintEnd_toEndOf="@+id/textResultados"
+        app:layout_constraintBottom_toTopOf="@+id/textViewResultados"
+        app:layout_constraintEnd_toEndOf="@+id/textViewResultados"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -33,16 +33,18 @@
         android:id="@+id/linearLayout5"
         android:layout_width="280dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="100dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout4">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <Button
             android:id="@+id/buttonClr"
             android:layout_width="55dp"
             android:layout_height="45dp"
+            android:onClick="Clear"
             android:paddingHorizontal="0dp"
             android:text="clr"
             app:iconPadding="0dp" />
@@ -52,6 +54,7 @@
             android:layout_width="55dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
+            android:onClick="Cero"
             android:text="0" />
 
         <Button
@@ -59,6 +62,7 @@
             android:layout_width="55dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
+            android:onClick="Equals"
             android:text="=" />
 
         <Button
@@ -66,6 +70,7 @@
             android:layout_width="55dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
+            android:onClick="Suma"
             android:text="+" />
     </LinearLayout>
 
@@ -76,12 +81,14 @@
         android:layout_marginBottom="16dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout3">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/buttonSiete"
             android:layout_width="55dp"
             android:layout_height="45dp"
+            android:onClick="Siete"
             android:text="7" />
 
         <Button
@@ -89,6 +96,7 @@
             android:layout_width="55dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
+            android:onClick="Ocho"
             android:text="8" />
 
         <Button
@@ -96,6 +104,7 @@
             android:layout_width="55dp"
             android:layout_height="45dp"
             android:layout_marginStart="12dp"
+            android:onClick="Nueve"
             android:text="9" />
 
         <Button
@@ -103,6 +112,7 @@
             android:layout_width="55dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
+            android:onClick="Division"
             android:text="/" />
     </LinearLayout>
 
@@ -113,12 +123,14 @@
         android:layout_marginBottom="16dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/buttonCuatro"
             android:layout_width="55dp"
             android:layout_height="45dp"
+            android:onClick="Cuatro"
             android:text="4" />
 
         <Button
@@ -126,6 +138,7 @@
             android:layout_width="55dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
+            android:onClick="Cinco"
             android:text="5" />
 
         <Button
@@ -133,6 +146,7 @@
             android:layout_width="55dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
+            android:onClick="Seis"
             android:text="6" />
 
         <Button
@@ -140,6 +154,7 @@
             android:layout_width="55dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
+            android:onClick="Multiplicacion"
             android:text="*" />
     </LinearLayout>
 
@@ -147,10 +162,11 @@
         android:id="@+id/linearLayout"
         android:layout_width="280dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="16dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
@@ -158,6 +174,7 @@
             android:layout_width="55dp"
             android:layout_height="45dp"
             android:layout_marginBottom="56dp"
+            android:onClick="Uno"
             android:text="1" />
 
         <Button
@@ -166,6 +183,7 @@
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="56dp"
+            android:onClick="Dos"
             android:text="2" />
 
         <Button
@@ -174,13 +192,15 @@
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="56dp"
+            android:onClick="Tres"
             android:text="3" />
 
         <Button
             android:id="@+id/buttonMenos"
             android:layout_width="55dp"
             android:layout_height="45dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="16dp"
+            android:onClick="Resta"
             android:text="-" />
     </LinearLayout>
 

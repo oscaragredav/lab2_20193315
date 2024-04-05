@@ -20,7 +20,7 @@ public class Activity_Indicaciones extends AppCompatActivity {
     }
 
     public void regresarCalcular (View view){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, ActivityCalculadora.class);
         startActivity(intent);
     }
 }
