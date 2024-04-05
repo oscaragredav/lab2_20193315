@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityCalculadora">
+
+    <TextView
+        android:id="@+id/textResultados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout5" />
+
+    <TextView
+        android:id="@+id/textOperadores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textResultados"
+        app:layout_constraintEnd_toEndOf="@+id/textResultados"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout4">
+
+
+        <Button
+            android:id="@+id/buttonClr"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:paddingHorizontal="0dp"
+            android:text="clr"
+            app:iconPadding="0dp" />
+
+        <Button
+            android:id="@+id/buttonCero"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/buttonEq"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:text="=" />
+
+        <Button
+            android:id="@+id/buttonMas"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:text="+" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3">
+
+        <Button
+            android:id="@+id/buttonSiete"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/buttonOcho"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/buttonNueve"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="12dp"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/buttonDiv"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:text="/" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/buttonCuatro"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/buttonCinco"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/buttonSeis"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/buttonMult"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:text="*" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonUno"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="56dp"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/buttonDos"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="56dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/buttonTres"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="56dp"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/buttonMenos"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:text="-" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
