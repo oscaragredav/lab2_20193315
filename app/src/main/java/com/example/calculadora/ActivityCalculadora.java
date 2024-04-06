@@ -1,9 +1,11 @@
 package com.example.calculadora;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,14 +13,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class ActivityCalculadora extends AppCompatActivity {
 
     TextView fila2;
     TextView fila1;
     Double n1 = 0.0;
     Double n2 = 0.0;
-
+    Double res=0.0;
     String operador= "";
+    ArrayList<String> historial = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -134,7 +139,7 @@ public class ActivityCalculadora extends AppCompatActivity {
     
     public void Equals (View view){
         n1 = Double.parseDouble(fila2.getText().toString());
-        Double res=0.0;
+
         if(operador.equals("+")){
             res=n2+n1;
         }else if (operador.equals("-")) {
@@ -142,8 +147,15 @@ public class ActivityCalculadora extends AppCompatActivity {
         }else if (operador.equals("*")) {
             res=n2*n1;
         }else if (operador.equals("/")) {
-            res=n2/n1;
+            if(n1==0.0){
+            //ERROR
+                Clear(view);
+                Toast.makeText(ActivityCalculadora.this,"No se puede dividir por 0", Toast.LENGTH_LONG).show();
+            }else{
+                res=n2/n1;
+            }
         }
+        historial.add(Double.toString(res));
         fila1.setText(fila2.getText());
         fila2.setText(Double.toString(res));
     }
@@ -154,6 +166,13 @@ public class ActivityCalculadora extends AppCompatActivity {
         n1=0.0;
         n2=0.0;
         operador="";
+    }
+
+    public void Historial (View view) {
+        Intent intent = new Intent(this,ActivityHistorial.class);
+        intent.putExtra("historial",historial);
+        startActivity(intent);
+
     }
 
 }
